@@ -1,0 +1,17 @@
+Game,Escape from Tarkov
+Launcher is mandatory,true
+1 game = 1 launcher,true
+registry path to launcher,Компьютер\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B0FDA062-7581-4D67-B085-C4E7C358037F}_is1
+registry path to launcher key,DisplayIcon
+registry path to launcher type,full path to executable
+executable name,BsgLauncher.exe
+game vs launcher folder relation,irrelevant
+path to game folder type,irrelevant
+path to game folder source,irrelevant
+path to game folder source key,irrelevant
+path to game folder source type,irrelevant
+URL to launcher installer,https://prod.escapefromtarkov.com/launcher/download
+Play action type,run launcher
+Uninstall game action type,open Windows Uninstall Programs
+Store page URL,https://www.escapefromtarkov.com/preorder-page
+Launcher name,BSG Launcher

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aliaksandr Dzik")]
 [assembly: AssemblyProduct("BattlestateGames")]
-[assembly: AssemblyCopyright("Copyright ©  2021 Aliaksandr Dzik")]
+[assembly: AssemblyCopyright("Copyright ©  2022 Aliaksandr Dzik")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

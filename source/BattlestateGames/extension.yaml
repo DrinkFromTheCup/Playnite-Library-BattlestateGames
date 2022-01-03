@@ -1,12 +1,12 @@
 ﻿Id: BattlestateGames
-Name: Space Station 13 (BYOND) Importer
+Name: Battlestate Games Launcher Importer
 Author: Aliaksandr Dzik
-Version: 0.2
+Version: 0.1
 Module: BattlestateGames.dll
 Type: GameLibrary
 Icon: icon.png
 Links:
-  - Name: Discussions
-    Url: https://playnite.link/forum/thread-1045.html
+##  - Name: Discussions
+##    Url: https://playnite.link/forum/thread-1045.html
   - Name: Support
     Url: https://github.com/DrinkFromTheCup/Playnite-Library-BattlestateGames

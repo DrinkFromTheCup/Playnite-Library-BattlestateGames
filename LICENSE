@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Aliaksandr Dzik
+Copyright (c) 2022 Aliaksandr Dzik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,3 +22,19 @@ SOFTWARE.
 
 Code borrowed from PlayniteExtensions repository is copyrighted by JosefNemec, see
 https://github.com/JosefNemec/PlayniteExtensions/blob/master/LICENSE.md
+
+Об используемом в комплекте поставки плагина логотипе Escape from Tarkov
+(на русском языке для сохранения юридической силы на территории правообладателя):
+
+Согласно Правил Игры обр. 29 мая 2018 года (актуальных на момент создания плагина Playnite-Library-BattlestateGames):
+2.6.6. На некоторых Веб-сайтах Battlestate Games Limited специально обозначает отдельный Контент
+(например, изображения, графические или иллюстративные материалы и товарные знаки, принадлежащие
+Battlestate Games Limited) как предназначенный «для использования на пользовательских сайтах».
+В настоящих Правилах Игры специально обозначенный Контент именуется «Контент для пользовательских сайтов».
+
+Иных юридически валидных документов, регулирующих использование логотипа Escape from Tarkov
+(принадлежащего Battlestate Games Ltd) в стороннем программном обеспечении, в публичном доступе не обнаружено.
+Плагин Playnite-Library-BattlestateGames не предназначен для получения какой бы то ни было прибыли
+вкупе либо в отрыве от какой бы то ни было принадлежащей Battlestate Games Ltd интеллектуальной собственности
+(включая программное обеспечение "Побег из Таркова" и его логотип), не одобрен Battlestate Games Ltd,
+никоим иным образом не связан непосредственно с активной деятельностью Battlestate Games Ltd.

@@ -34,7 +34,7 @@ namespace BattlestateGames
 
         // Start of BattlestateGames plugin definitions
         public BattlestateGames(IPlayniteAPI api) : base(
-            "Space Station 13 (BYOND)",
+            "Battlestate Games (Escape from Tarkov)",
             Guid.Parse("d0217e44-0df5-45f7-8515-478bdf21a883"),
             // No need in auto-close. No need in extra settings either.
             new LibraryPluginProperties { CanShutdownClient = false, HasSettings = false },
@@ -53,28 +53,25 @@ namespace BattlestateGames
                 // Start of new game entry.
                 new GameMetadata()
                 {
-                    Name = "Space Station 13",
-                    // Keeping it generic since I didn't finished the research on BYOND's internal IDs yet.
-                    // There are at least two different kinds (one of which is needed for connecting to servers -
-                    // but we'd better import whole playlist with whole links instead of assembling it on the go.
-                    // Eventually.
-                    GameId = "BattlestateGames",
+                    Name = "Escape from Tarkov",
+                    // Keeping it generic again (NB: it's 2nd plugin, so - again).
+                    GameId = "escapefromtarkov",
                     GameActions = new List<GameAction>
                     {
                         new GameAction()
                         {
                             Name = "Play",
-                            Type = GameActionType.URL,
-                            Path = @"byond://",
+                            Type = GameActionType.File,
+                            Path = BattlestateGamesChecks.InstallationPath,
                             IsPlayAction = true
                         }
                     },
                     IsInstalled = BattlestateGamesInstalled,
-                    // Intentionally keeping both names together. Since de jure it's a game entry but de facto launcher entry.
-                    Source = new MetadataNameProperty("Space Station 13 (BYOND)"),
+                    // Launcher name to launcher, game name to game... mixed name to mix.
+                    Source = new MetadataNameProperty("Battlestate Games"),
                     Links = new List<Link>()
                     {
-                        new Link("Store", @"http://www.byond.com/games/exadv1/BattlestateGames")
+                        new Link("Store", @"https://www.escapefromtarkov.com/preorder-page")
                     },
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 }

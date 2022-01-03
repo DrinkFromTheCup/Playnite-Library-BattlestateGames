@@ -16,6 +16,7 @@ namespace BattlestateGames
     {
         public override string Icon => BattlestateGamesChecks.Icon;
 
+        // Intended to avoid showing up in launcher launch menu.
         public override bool IsInstalled => false;
 
         // Keeping it there despite intentional lack of BYOND in launchers launch menu,
@@ -58,23 +59,30 @@ namespace BattlestateGames
 
         // The plugin's Sequence begins here.
         // Our #1 goal is to get the path to launcher.
-        // For this particular game, however, we're blessed with STATIC direct link to the launcher's executable.
+        // We're using #oddlyspecific approach here. We know the key and the value - but we're not entirely sure of the path -
+        // thus, abusing that coopy-paaste from Stackexchange!
         // Even better, since we don't need to launch anything else ever (for now) - it all begins here
         // and here it all ends. The rest of the code just works by example to preserve any possible third-party interactions.
         public static string InstallationPath
         {
             get
             {
-                RegistryKey key;
-                key = Registry.ClassesRoot.OpenSubKey(@"byond\shell\open\command");
+            // Blatant coopy-paaste from https://stackoverflow.com/a/64029279 for further use in InstallationPath
+            // Do not that not us nor solution author neither compilator expect more than one successful iteration here.
+            // But we might expand on it during Stage 2.
+            RegistryKey uninstallKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall");
+            var programs = uninstallKey.GetSubKeyNames();
+
+            foreach (var program in programs)
+            {
+                RegistryKey subkey = uninstallKey.OpenSubKey(program);
+                if (string.Equals("Battlestate Games", subkey.GetValue("Publisher", string.Empty).ToString(), StringComparison.CurrentCulture))
                 {
-                    // We need a path to executable, not a blind URI copy-paste.
-                    // Do note that portable client exists - for which this check will return null by default.
-                    // Since this install method breaks connection from web interfaces, it will cause trouble to end user anyway
-                    // way before our plugin might suffer from that.
-                    // I believe, BYOND adds relevant registry entry anyway after first run so...
-                    return key.GetValue("").ToString().Replace(" \"%1\"", "");
-                }          
+                    return subkey.GetValue("DisplayIcon").ToString();
+                }
+            }
+
+            return string.Empty;   
             }
         }
 

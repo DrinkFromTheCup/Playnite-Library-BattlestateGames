@@ -28,12 +28,12 @@ namespace BattlestateGames
         {
             if (BattlestateGamesChecks.IsInstalled)
             {
-                Name = "Run with BYOND";
+                Name = "Run BSG Launcher";
             }
             else
             // Failsafe for cases where we added games anyway but launcher is nowhere to be seen.
             {
-                Name = "Download BYOND";
+                Name = "Download BSG Launcher";
             }
         }
 
@@ -45,15 +45,15 @@ namespace BattlestateGames
         public override void Install(InstallActionArgs args)
         {
             if (BattlestateGamesChecks.IsInstalled)
-            // If we can use URI - we have to use URI.
-            // Especially if we use its entry in registry to detect BYOND location and status.
+            // ...but it isn't installed. No need in it until they'll decide to stick their older games into that launcher.
             {
-                ProcessStarter.StartUrl(@"byond://");
+            //    ProcessStarter.StartUrl(@"about:blank");
             }
             else
             // Failsafe for cases where we added games anyway but launcher is nowhere to be seen.
+            // Yarr possible - but no need in handling it specifically...
             {
-                ProcessStarter.StartUrl(@"http://www.byond.com/download/");
+                ProcessStarter.StartUrl(@"https://prod.escapefromtarkov.com/launcher/download");
             }
 
             StartInstallWatcher();

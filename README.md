@@ -1,3 +1,7 @@
+### Open for adoption!
+
+Due to BSG account loss, I can't ensure plugin's quality on my own anymore. Feel free to take over this repo, if you like.
+
 ### Escape from Tarkov Stand-alone launcher library integration for Playnite
 
 Robust integration of Battlestate Games Launcher, complete with its one and only only Escape from Tarkov game.
